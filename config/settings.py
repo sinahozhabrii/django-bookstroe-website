@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # local apps
     'account',
+    'books',
+    'pages',
     # crispy form apps
     "crispy_forms",
     "crispy_bootstrap5",
