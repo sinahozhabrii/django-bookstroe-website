@@ -3,7 +3,7 @@
 {% block title %}مشخصات کتاب {% endblock title %}
 {% block content %}
 <form action="" method="post">
-<h1>آیا از حذف کتاب {{ book.title }} مطمئن هستی؟</h1>
+<h1>آیا از حذف کتاب {{ book.title|capfirst }} مطمئن هستی؟</h1>
     {% csrf_token %}
 <input type="submit" class="btn btn-danger" value = "بله مطمئن هستم">
 </form>
