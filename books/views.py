@@ -7,6 +7,7 @@ from books.models import Book
 # Create your views here.
 class BookListView(generic.ListView):
     model = Book
+    paginate_by = 6
     template_name = "books/books_list_view.html"
     context_object_name = "books"
 class BookDetailView(generic.DetailView):
@@ -15,12 +16,12 @@ class BookDetailView(generic.DetailView):
 
 class BookCreateView(generic.edit.CreateView):
     model = Book
-    fields = ['title', 'author', 'content', 'price']
+    fields = ['title', 'author', 'content', 'price','cover']
     template_name = 'books/books_create.html'
 
 class BookUpdateView(generic.UpdateView):
     model = Book
-    fields = ['title', 'author', 'content', 'price']
+    fields = ['title', 'author', 'content', 'price',"cover"]
     template_name = "books/books_update.html"
 
 class BookDeleteView(generic.DeleteView):
